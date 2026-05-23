@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .box {
+            margin-bottom: 40px;
+        }
+
+        img {
+            width: 200px;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>请选择你喜欢的嘉宾并给出心动值</h1>
+
+    <div id="container"></div>
+
+    <script>
+
+        const imgs = [
+                "image/戴俊/1aff3e87413a5205fdb52bda24b220ab.jpg",
+                "image/戴俊/2e60dfa224e32ba3b68c4dbc5e24a7c2.jpg",
+                "image/戴俊/3dab05e34218a9fd9338a13c990a2f29.jpg",
+                "image/戴俊/4a5f153ddb6e1e68c3cd88b4a6915e91.jpg",
+                "image/戴俊/6ceb72b3698458868c7a36768b9282e9.jpg",
+                "image/戴俊/48cf69f7baf3ee32b871f7096dbc7c0b.jpg",
+                "image/戴俊/84aa2e5be098353f19497dc046a98532.jpg",
+                "image/戴俊/123e5c10ac429f44c77a9d81819d3d5b.jpg",
+                "image/戴俊/b05d909bdecae4ca8ac1862005074ebd.jpg",
+                "image/戴俊/e488ec1b5025affca165f6f34c2f3cd2.jpg"
+            ];
+
+        const container =
+            document.getElementById("container");
+
+        for (let i = 0; i < imgs.length; i++) {
+
+            const box =
+                document.createElement("div");
+
+            box.className = "box";
+
+            box.innerHTML = `
+            <h3>第 ${i + 1} 号选手</h3>
+
+            <img src="${imgs[i]}">
+
+            <label>
+                评分：
+            </label>
+
+            <select>
+                <option>1分</option>
+                <option>2分</option>
+                <option>3分</option>
+                <option>4分</option>
+                <option>5分</option>
+            </select>
+        `;
+
+            container.appendChild(box);
+        }
+
+    </script>
+
+</body>
+
+</html>

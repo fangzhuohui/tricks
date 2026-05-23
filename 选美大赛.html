@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction:column;
+            margin-top:50px;
+        }
+        h1{
+            margin-bottom:20px;
+        }
+        img{
+            width:300px;
+            margin-bottom:20px;
+        }
+        button{
+            padding:10px 20px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">请选择你喜欢的人并且给出心动值</h1>
+    <img src="image/戴俊/1aff3e87413a5205fdb52bda24b220ab.jpg" alt="一个可爱的图片" id="photo">
+    <button onclick="changeImg()">下一位</button>
+    <script>
+        const imgs = [
+            "image/戴俊/1aff3e87413a5205fdb52bda24b220ab.jpg",
+            "image/戴俊/2e60dfa224e32ba3b68c4dbc5e24a7c2.jpg",
+            "image/戴俊/3dab05e34218a9fd9338a13c990a2f29.jpg",
+            "image/戴俊/4a5f153ddb6e1e68c3cd88b4a6915e91.jpg",
+            "image/戴俊/6ceb72b3698458868c7a36768b9282e9.jpg",
+            "image/戴俊/48cf69f7baf3ee32b871f7096dbc7c0b.jpg",
+            "image/戴俊/84aa2e5be098353f19497dc046a98532.jpg",
+            "image/戴俊/123e5c10ac429f44c77a9d81819d3d5b.jpg",
+            "image/戴俊/b05d909bdecae4ca8ac1862005074ebd.jpg",
+            "image/戴俊/e488ec1b5025affca165f6f34c2f3cd2.jpg"
+        ];
+        const container = document.gtElementById("container");
+        for (let i = 0; i < imgs.length; i++) {
+            
+        }
+        let index = 0;
+        function changeImg() {
+            const photo = document.getElementById("photo");
+            index++;
+            if (index >= imgs.length) {
+                index = 0;
+            }
+            photo.src = imgs[index];
+        };
+    </script>
+</body>
+</html>
